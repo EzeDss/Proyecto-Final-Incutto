@@ -1,0 +1,18 @@
+{% extends "AppDesafio/padre.html" %}
+
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Lista de Categorias</h1>
+    <h1>Categoria</h1>
+    <ul>    
+        <p>Categoria:    {{categorias.categoria}}</p>
+        <p>Sub Categoria:    {{categorias.subcategoria}}</p>
+        <a href="{% url 'Categorias' %}">Volver a Lista de Categorias</a>
+        </p>
+    </ul>
+
+
+{% endblock %}

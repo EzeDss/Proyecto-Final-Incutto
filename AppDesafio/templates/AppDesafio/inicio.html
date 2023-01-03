@@ -1,0 +1,33 @@
+{% extends "AppDesafio/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Busqueda producto</h1>
+    <p>Escriba el producto a buscar</p>
+    <br>
+    <form action="/AppDesafio/busquedaproducto/" method="get"> 
+        <input type="text" name="producto">
+            <input type="submit",value="Buscar">
+        </form>
+    <br>
+    <h1>Busqueda Categoria</h1>
+    <p>Escriba la categia a buscar</p>
+    <br>
+    <form action="/AppDesafio/busquedacategoria/" method="get"> 
+        <input type="text" name="categoria">
+            <input type="submit",value="Buscar">
+        </form>
+    <br>
+    <h1>Busqueda Vendedor</h1>
+    <p>Escriba el vendedor a buscar</p>
+    <br>
+    <form action="/AppDesafio/busquedavendedor/" method="get"> 
+        <input type="text" name="vendedor">
+            <input type="submit",value="Buscar">
+        </form>
+
+{% endblock %}

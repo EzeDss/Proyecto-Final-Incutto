@@ -1,0 +1,18 @@
+{% extends "AppDesafio/padre.html" %}
+
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Producto</h1>
+    <ul>    
+        <p>Nombre:    {{productos.producto}}</p>
+        <p>Precio:    {{productos.precio}}</p>
+        <p>Stock:    {{productos.stock}}</p>
+        <p>
+        <a href="{% url 'Productos' %}">Volver a Lista de Productos</a>
+        </p>
+    </ul>
+
+{% endblock %}

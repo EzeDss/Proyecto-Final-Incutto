@@ -1,0 +1,22 @@
+{% extends "AppDesafio/padre.html" %}
+
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Lista de Categorias</h1>
+
+    {%for categoria in object_list%}
+    Categoria:    {{categoria.categoria}}<br>
+    <p>
+        <a href="{% url 'Ver Categoria' categoria.id %}">Ver</a>
+        <a href="{% url 'Editar Categoria' categoria.id %}">Editar</a>
+        <a href="{% url 'Eliminar Categoria' categoria.id %}">Borrar</a>
+    </p>
+    {%endfor%} 
+</ul>
+
+<a class="navbar-brand" href="{% url 'Agregar Categoria' %}">Agregar Categoria</a>
+
+{% endblock %}

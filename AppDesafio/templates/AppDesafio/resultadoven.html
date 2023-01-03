@@ -1,0 +1,24 @@
+{% extends "AppDesafio/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    Busqueda: {{busqueda}}
+    <br>
+    Vendedor Buscado:<br>
+    {%for ven in vendedor%}
+    Nombre:    {{ven.nombre}}<br>
+    Cantidad de Productos:    {{ven.cantidadProductos}}<br>
+    Fecha de ingreso:     {{ven.fecha_ingreso}}<br>
+    EMail:    {{ven.mail}}<br>
+        <br>
+    {%endfor%}
+
+    <form action="/AppDesafio/inicio" method=""> {% csrf_token %}
+        <input type="submit", value="Volver">
+    </form>
+
+{% endblock %}

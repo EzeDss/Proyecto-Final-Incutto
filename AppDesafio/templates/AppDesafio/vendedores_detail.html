@@ -1,0 +1,19 @@
+{% extends "AppDesafio/padre.html" %}
+
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Vendedor</h1>
+    <ul>    
+        <p>Nombre:    {{vendedores.nombre}}</p>
+        <p>Cantidad de Productos:    {{vendedores.cantidadProductos}}</p>
+        <p>Fecha de ingreso:    {{vendedores.fecha_ingreso}}</p>
+        <p>Email:    {{vendedores.mail}}</p>
+        <a href="{% url 'Vendedores' %}">Volver a Lista de Vendedores</a>
+        </p>
+    </ul>
+
+
+{% endblock %}

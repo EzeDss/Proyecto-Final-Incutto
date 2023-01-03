@@ -1,0 +1,22 @@
+{% extends "AppDesafio/padre.html" %}
+
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Lista de Vendedores</h1>
+
+    {%for vendedor in object_list%}
+    Vendedor:    {{vendedor.nombre}}<br>
+    <p>
+        <a href="{% url 'Ver Vendedor' vendedor.id %}">Ver</a>
+        <a href="{% url 'Editar Vendedor' vendedor.id %}">Editar</a>
+        <a href="{% url 'Eliminar Vendedor' vendedor.id %}">Borrar</a>
+    </p>
+    {%endfor%} 
+</ul>
+
+<a class="navbar-brand" href="{% url 'Agregar Vendedor' %}">Agregar Vendedor</a>
+
+{% endblock %}

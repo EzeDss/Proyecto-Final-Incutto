@@ -1,0 +1,14 @@
+{% extends "AppDesafio/padre.html" %}
+
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Eliminar Producto</h1>
+    <form method="post">{% csrf_token %}
+        ¿Estas seguro que deceas eliminar el producto "{{object.producto}}" ?<br> 
+        <input type="submit", value="Borrar">
+    </form>
+
+{% endblock %}
